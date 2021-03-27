@@ -1,0 +1,3 @@
+"Name", "ShortName", "ModeAndPID", "Equation", "Min Value", "Max Value", "Units", "Header", "startDiagnostic", "stopDiagnostic", "Scale"
+"001_Battery SoC","SOC","0x22b046","(A*255 + B)/10",0,100,"%","781","","",1
+"001_Vehicle Speed","vSpeed","0x22ba00","ABS(((A*255 + B)-20000)/100)",0,160,"km/h","7E3","","",1
