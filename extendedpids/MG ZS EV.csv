@@ -1,7 +1,7 @@
 "Name", "ShortName", "ModeAndPID", "Equation", "Min Value", "Max Value", "Units", "Header", "startDiagnostic", "stopDiagnostic", "Scale"
 "001_Battery Bus Voltage","Batt Bus Volts","0x22b041","(A*255 + B) * 0.25",0,456,"V","781","","",1
 "001_Battery Voltage","Batt Volts","0x22b042","(A*255 + B) * 0.25",0,456,"V","781","","",1
-"001_Battery Current","Batt Current","0x22b043","(A*255 + B) * 0.025 - 1000",0,100,"A","781","","",1
+"001_Battery Current","Batt Current","0x22b043","((A*255 + B) * 0.025) - 1000",-200,200,"A","781","","",1
 "001_Battery State of Charge","SoC","0x22b046","(A*255 + B)/10",0,100,"%","781","","",1
 "001_Battery Coolant Temp","Batt Coolant","0x22b05c","A",0,100,"CFXX","781","","",1
 "001_Battery State of Health","SoH","0x22b061","(A*255 + B)/100",0,100,"%","781","","",1
@@ -10,8 +10,8 @@
 "001_BMS Status","BMS Status","0x22b048","LOOKUP(A:A:1='ready/idle off':3='running':6='charging':10='connected not charging')",0,100,"Status","781","","",1
 "001_BMS Coolant Temp","SoH","0x22b05C","A",0,100,"CFXX","781","","",1
 
-"001_Vehicle Speed","Speed","0x22ba00","ABS(((A*255 + B)-20000)/100)",0,160,"km/h","7E3","","",1
+"001_Vehicle Speed","Speed","0x22ba00","ABS(((A*255 + B)-19922)/100)",0,160,"km/h","7E3","","",1
 "001_Max Charge Rate","Charge kW","0x22b402","(A*255 + B)/10",0,160,"kW","7E3","","",1
-"001_Motor Speed","RPM","0x22b402","A*255 + B",0,160,"rpm","7E3","","",1
+"001_Engine Speed","RPM","0x22b402","(A*255 + B) - 32640)",0,10000,"rpm","7E3","","",1
 
-"001_Odometer Reading","Odometer","0x22b101","(A*255 + B)",0,3000000,"km","760","","",1
+"001_Odometer Reading","Odometer","0x22b101","(A*255*255 + B*255 + C) + 6",0,3000000,"km","760","","",1
