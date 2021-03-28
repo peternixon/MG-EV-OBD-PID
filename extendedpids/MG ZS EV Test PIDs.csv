@@ -1,0 +1,4 @@
+"Name", "ShortName", "ModeAndPID", "Equation", "Min Value", "Max Value", "Units", "Header", "startDiagnostic", "stopDiagnostic", "Scale"
+"001_Battery Coolant Temp","Batt Coolant","0x22b05c","A",0,100,"CFXX","781","","",1
+
+"001_Ambient Temperature","Air Temp","0x22e01b","B/2 + 40)",0,10000,"C","750","","",1
