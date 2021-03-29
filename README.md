@@ -5,6 +5,8 @@ These are being tested with an Australian 2021 model MG ZS EV.
 ## How to use:
 These codes are primarily for use with Torque Pro which runs on Android phones and tablets.
 
+Download https://raw.githubusercontent.com/peternixon/MG-EV-OBD-PID/main/extendedpids/MG%20ZS%20EV.csv and put it in the ".torque\extendedpids" folder on you phone then load it from the "Settings \ Manage extra PIDs/Sensors \ Add predefined set \ MG ZS EV" Menu in the Torque Pro app.
+
 ## What hardware do I need?
 Any Bluetooth Diagnostic Scanner supported by Torque Pro connected to an android phone or tablet should be fine however testing is being done with an NX101 Pro with PIC18F25K80 Chip
 
