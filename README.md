@@ -6,6 +6,7 @@ These are being tested with an Australian 2021 model MG ZS EV.
 These codes are primarily for use with Torque Pro which runs on Android phones and tablets.
 
 Download https://github.com/peternixon/MG-EV-OBD-PID/archive/refs/heads/main.zip and extract the "extendedpids\MG ZS EV.csv" file into the ".torque\extendedpids\" directory on your phone then import it from the "Settings \ Manage extra PIDs/Sensors \ Add predefined set \ MG ZS EV" Menu in the Torque Pro app.
+
 If you wish, you can also use my sample dashbard by extracting the "dashboards\MG ZS EV.dash" file into the ".torque\dashboards\" directory on your phone then importing it into Torque Pro.
 
 ## What hardware do I need?
