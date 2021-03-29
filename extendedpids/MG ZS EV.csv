@@ -19,3 +19,13 @@
 "001_Cell Voltage Delta","Volt Delta",,(VAL{001_Max Cell Voltage} - VAL{001_Min Cell Voltage}) * 1000,0,10,"mV",,"","",1
 
 "001_Blower Speed","Blower Speed","0x22e00f","A",0,4,"X","750","","",1
+
+"001_Tire Pressure FL","Tire Pressure FL","0x22b001","A*4",0,300,"kPa","724","","",1
+"001_Tire Pressure FR","Tire Pressure FR","0x22b001","B*4",0,300,"kPa","724","","",1
+"001_Tire Pressure RR","Tire Pressure RR","0x22b001","C*4",0,300,"kPa","724","","",1
+"001_Tire Pressure RL","Tire Pressure RL","0x22b001","D*4",0,300,"kPa","724","","",1
+
+"001_Tire Temp FL","Tire Temp FL","0x22b003","A/2",0,100,"C","724","","",1
+"001_Tire Temp FR","Tire Temp FR","0x22b003","B/2",0,100,"C","724","","",1
+"001_Tire Temp RR","Tire Temp RR","0x22b003","C/2",0,100,"C","724","","",1
+"001_Tire Temp RL","Tire Temp RL","0x22b003","D/2",0,100,"C","724","","",1
