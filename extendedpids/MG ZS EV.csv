@@ -3,6 +3,7 @@
 "001_Battery Voltage","Batt Volts","0x22b042","(A*255 + B) * 0.25",0,456,"V","781","","",1
 "001_Battery Current","Batt Current","0x22b043","((A*255 + B) * 0.025) - 1000",-200,200,"A","781","","",1
 "001_Battery State of Charge","SoC","0x22b046","(A*255 + B)/10",0,100,"%","781","","",1
+"001_Battery Coolant Temp","Batt Coolant","0x22b05c","(A * 0.5) - 40.0",0,100,"C","781","","",1
 "001_Battery State of Health","SoH","0x22b061","(A*255 + B)/100",0,100,"%","781","","",1
 "001_Max Cell Voltage","Max Cell Volts","0x22b058","(A*255 + B)/1000",0,4.2,"V","781","","",1
 "001_Min Cell Voltage","Min Cell Volts","0x22b059","(A*255 + B)/1000",0,4.2,"V","781","","",1
@@ -18,6 +19,8 @@
 
 "001_Cell Voltage Delta","Volt Delta",,(VAL{001_Max Cell Voltage} - VAL{001_Min Cell Voltage}) * 1000,0,10,"mV",,"","",1
 
+"001_Ambient Temperature","Air Temp","0x22e01b","(A*255 + B) / 10.0 - 40.0",0,100,"C","750","","",1
+"001_FL Face Outlet Temp","Face Temp","0x22e013","((A*255 + B) / 10) - 30",0,100,"C","750","","",1
 "001_Blower Speed","Blower Speed","0x22e00f","A",0,4,"X","750","","",1
 
 "001_Tire Pressure FL","Tire Pressure FL","0x22b001","A*4",0,300,"kPa","724","","",1
