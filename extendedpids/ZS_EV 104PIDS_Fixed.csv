@@ -1,0 +1,105 @@
+Name," ""ShortName"""," ""ModeAndPID"""," ""Equation"""," ""Min Value"""," ""Max Value"""," ""Units"""," ""Header"""," ""startDiagnostic"""," ""stopDiagnostic"""," ""Scale"""
+..eZS Air Comp,Air,22BB01,INT16(A:B)/100,0,7,kW,7E3,,,1
+..eZS Batt Coolant,Batt Coolant,22B05C,(A/2)-40,0,50,c,781,,,1
+..eZS Batt Temp,Batt Temp,22B056,(A/2)-40,0,50,c,781,,,1
+..eZS Battery,Battery,22B705,INT16(A:B)/10,350,460,v,7E3,,,1
+..eZS CellMaxVolt,CellMaxVolt,22B058,INT16(A:B)/1000,2.5,4.400000095,V,781,,,1
+..eZS CellMinVolt,CellMinVolt,22B059,INT16(A:B)/1000,2.5,4.400000095,V,781,,,1
+..eZS Consumption,Consumption,,10*TOT(1:VAL{SocDiff}),0,250,%,,,,1
+..eZS Coolant,Coolant,22B309,A-40,0,60,c,7E3,,,1
+..eZS Current,Current,22B043,(INT16(A:B)-40000)/40,-100,100,A,781,,,1
+..eZS Distance,Distance,,TOT(3600:VAL{..eZS Speed}),0,337,km,,,,1
+..eZS Efficiency,Efficiency,,LOOKUP(VAL{..eZS Speed}:(VAL{..eZS Total Power}/LOOKUP(VAL{..eZS Speed}::0~1=1))*1000:0~1=0),80,200,Wh/km,,,,1
+..eZS Efficiency3s,Efficiency 3s,,TAVG(3:VAL{..eZS Efficiency}),80,200,Wh/km,,,,1
+..eZS Est Distance,Est Distance,,(445*VAL{..eZS SoC})/LOOKUP(VAL{..eZS Total Eff}::0=0.1),0,400,Km,,,,1
+..eZS Fan,Fan,22BB91,A,0,1,,7E3,,,1
+..eZS Motor Power,Motor Power,,(VAL{..eZS Motor Speed} * VAL{..eZS Motor Torque})/10000,-50,100,kW,,,,1
+..eZS Motor Speed,Motor Speed,22B402,INT16(A:B)-32767,-1000,10000,rpm,7E3,,,1
+..eZS Motor Temp,Motor,22B405,A-40,0,60,c,7E3,,,1
+..eZS Motor Torque,Motor Torque,22B401,(INT16(A:B)-32767)/10,-100,360,Nm,7E3,,,1
+..eZS Outside Temp,Outside,22BB05,A-40,0,50,c,7E3,,,1
+..eZS SoC,SoC,22B701,INT16(A:B)/10,0,100,%,7E3,,,1
+..eZS SoH,SoH,22B061,(a*256+b)/100,0,100,%,781,,,1
+..eZS Speed,Speed,22BA00,ABS((INT16(A:B)-20000)/100),0,155,km/h,7E3,,,1
+..eZS Total Eff,Total Efficiency,,(445*VAL{..eZS Consumption})/LOOKUP(VAL{..eZS Distance}::0=0.1),0,250,Wh/km,,,,1
+..eZS Total Power,Total Power,,VAL{..eZS Battery}*VAL{..eZS Current}/1000,-50,100,kW,,,,1
+..eZS Trip Cost,Cost,,4.2*0.445*VAL{eZS Consumption},0,400,Baht,,,,1
+..eZS Trip Range,Trip Range,,43100/LOOKUP(VAL{..eZS Total Eff}::0=0.1),0,400,Km,,,,1
+SocDiff,SocDiff,,LOOKUP(RDLY(1:VAL{..eZS Soc})-VAL{..eZS SoC}:0:0.01~0.2=0.1:-0.2~-0.01=-0.1),0,100,%,,,,1
+..eZS DCDC In Amp,Current Input,22B581,(INT16(A:B) - 32767)/10,0,10,A,7E3,,,1
+..eZS DCDC In Volt,Volt Input,22B582,INT16(A:B)/10,0,460,V,7E3,,,1
+..eZS DCDC Mode,Mode,22B580,A,0,5,,7E3,,,1
+..eZS DCDC Out Amp,Current Output,22B583,INT16(A:B)/10,0,100,A,7E3,,,1
+..eZS DCDC Out Volt,Volt Output,22B584,INT16(A:B)/10,8,16,V,7E3,,,1
+..eZS DCDC Temp,Temp,22B587,A-40,25,60,c,7E3,,,1
+.00_BMS DC Bus Volt,DC Bus,22B041,(a*256+b)/4,350,480,V,781,,,
+.00_BMS Volt,Battery,22B042,(a*256+b)/4,350,480,V,781,,,
+.00_BMS Current,Current,22B043,(INT16(A:B)-40000)/40,-100,100,A,781,,,
+.00_BMS Resistance,Resistance,22B045,(a*256+b)/2,0,8190.5,Ohm,781,,,
+.00_BMS SoC,SoC,22B046,(a*256+b)/10,0,100,%,781,,,
+.00_BMS Error,BMS Error,22B047,a,0,255,,781,,,
+.00_BMS Status,BMS Status,22B048,a,0,255,,781,,,
+.00_BMS SystemMainRelayB,SMRB,22B049,a,0,1,,781,,,
+.00_BMS SystemMainRelayG,SMRG,22B04A,a,0,1,,781,,,
+.00_BMS SystemMainRelayP,SMRP,22B052,a,0,1,,781,,,
+.00_BMS MaxTemp,MaxTemp,22B056,(a/2)-40,0,60,C,781,,,
+.00_BMS MaxTempCell,MaxTempCell,22B056,b,0,255,,781,,,
+.00_BMS MinTemp,MinTemp,22B057,(a/2)-40,0,60,C,781,,,
+.00_BMS MinTempCell,MinTempCell,22B057,b,0,255,,781,,,
+.00_BMS MaxVolt,MaxVolt,22B058,INT16(A:B)/1000,2.5,4.4,V,781,,,
+.00_BMS MaxVoltCell,MaxVoltCell,22B058,C,0,255,,781,,,
+.00_BMS MinVolt,MinVolt,22B059,INT16(A:B)/1000,2.5,4.4,V,781,,,
+.00_BMS MinVoltCell,MinVoltCell,22B059,C,0,255,,781,,,
+.00_BMS Coolant,Coolant,22B05C,(a/2)-40,0,60,C,781,,,
+.00_BMS SoH,SoH,22B061,(a*256+b)/100,0,100,%,781,,,
+.00_BMS Year,Year,22B06D,A,0,60,,781,,,
+.00_BMS Month,Month,22B06D,B,1,12,,781,,,
+.00_BMS Day,Day,22B06D,C,1,31,,781,,,
+.00_BMS Hour,Hour,22B06D,D,0,23,,781,,,
+.00_BMS Minute,Minute,22B06D,E,0,59,,781,,,
+.00_BMS Sec,Sec,22B06D,F,0,59,,781,,,
+.00_BMS Unit01 MinVolt,CMU01 Min,22B001,((a*256+b)/2000)+1,2.5,4.4,V,781,,,
+.00_BMS Unit01 MaxVolt,CMU01 Max,22B001,((c*256+d)/2000)+1,2.5,4.4,V,781,,,
+.00_BMS Unit01 Temp2,CMU01 Temp2,22B001,(e/2)-40,0,60,C,781,,,
+.00_BMS Unit01 Temp1,CMU01 Temp1,22B001,(f/2)-40,0,60,C,781,,,
+.00_BMS Unit01 Circuit Temp,CMU01 Circuit,22B001,(g/2)-40,0,60,C,781,,,
+.00_BMS Unit02 MinVolt,CMU02 Min,22B009,((a*256+b)/2000)+1,2.5,4.4,V,781,,,
+.00_BMS Unit02 MaxVolt,CMU02 Max,22B009,((c*256+d)/2000)+1,2.5,4.4,V,781,,,
+.00_BMS Unit02 Temp2,CMU02 Temp2,22B009,(e/2)-40,0,60,C,781,,,
+.00_BMS Unit02 Temp1,CMU02 Temp1,22B009,(f/2)-40,0,60,C,781,,,
+.00_BMS Unit02 Circuit Temp,CMU02 Circuit,22B009,(g/2)-40,0,60,C,781,,,
+.00_BMS Unit03 MinVolt,CMU03 Min,22B011,((a*256+b)/2000)+1,2.5,4.4,V,781,,,
+.00_BMS Unit03 MaxVolt,CMU03 Max,22B011,((c*256+d)/2000)+1,2.5,4.4,V,781,,,
+.00_BMS Unit03 Temp2,CMU03 Temp2,22B011,(e/2)-40,0,60,C,781,,,
+.00_BMS Unit03 Temp1,CMU03 Temp1,22B011,(f/2)-40,0,60,C,781,,,
+.00_BMS Unit03 Circuit Temp,CMU03 Circuit,22B011,(g/2)-40,0,60,C,781,,,
+.00_BMS Unit04 MinVolt,CMU04 Min,22B019,((a*256+b)/2000)+1,2.5,4.4,V,781,,,
+.00_BMS Unit04 MaxVolt,CMU04 Max,22B019,((c*256+d)/2000)+1,2.5,4.4,V,781,,,
+.00_BMS Unit04 Temp2,CMU04 Temp2,22B019,(e/2)-40,0,60,C,781,,,
+.00_BMS Unit04 Temp1,CMU04 Temp1,22B019,(f/2)-40,0,60,C,781,,,
+.00_BMS Unit04 Circuit Temp,CMU04 Circuit,22B019,(g/2)-40,0,60,C,781,,,
+.00_BMS Unit05 MinVolt,CMU05 Min,22B021,((a*256+b)/2000)+1,2.5,4.4,V,781,,,
+.00_BMS Unit05 MaxVolt,CMU05 Max,22B021,((c*256+d)/2000)+1,2.5,4.4,V,781,,,
+.00_BMS Unit05 Temp2,CMU05 Temp2,22B021,(e/2)-40,0,60,C,781,,,
+.00_BMS Unit05 Temp1,CMU05 Temp1,22B021,(f/2)-40,0,60,C,781,,,
+.00_BMS Unit05 Circuit Temp,CMU05 Circuit,22B021,(g/2)-40,0,60,C,781,,,
+.00_BMS Unit06 MinVolt,CMU06 Min,22B029,((a*256+b)/2000)+1,2.5,4.4,V,781,,,
+.00_BMS Unit06 MaxVolt,CMU06 Max,22B029,((c*256+d)/2000)+1,2.5,4.4,V,781,,,
+.00_BMS Unit06 Temp2,CMU06 Temp2,22B029,(e/2)-40,0,60,C,781,,,
+.00_BMS Unit06 Temp1,CMU06 Temp1,22B029,(f/2)-40,0,60,C,781,,,
+.00_BMS Unit06 Circuit Temp,CMU06 Circuit,22B029,(g/2)-40,0,60,C,781,,,
+.00_BMS Unit07 MinVolt,CMU07 Min,22B0A3,((a*256+b)/2000)+1,2.5,4.4,V,781,,,
+.00_BMS Unit07 MaxVolt,CMU07 Max,22B0A3,((c*256+d)/2000)+1,2.5,4.4,V,781,,,
+.00_BMS Unit07 Temp2,CMU07 Temp2,22B0A3,(e/2)-40,0,60,C,781,,,
+.00_BMS Unit07 Temp1,CMU07 Temp1,22B0A3,(f/2)-40,0,60,C,781,,,
+.00_BMS Unit07 Circuit Temp,CMU07 Circuit,22B0A3,(g/2)-40,0,60,C,781,,,
+.00_BMS Unit08 MinVolt,CMU08 Min,22B0AB,((a*256+b)/2000)+1,2.5,4.4,V,781,,,
+.00_BMS Unit08 MaxVolt,CMU08 Max,22B0AB,((c*256+d)/2000)+1,2.5,4.4,V,781,,,
+.00_BMS Unit08 Temp2,CMU08 Temp2,22B0AB,(e/2)-40,0,60,C,781,,,
+.00_BMS Unit08 Temp1,CMU08 Temp1,22B0AB,(f/2)-40,0,60,C,781,,,
+.00_BMS Unit08 Circuit Temp,CMU08 Circuit,22B0AB,(g/2)-40,0,60,C,781,,,
+.00_BMS Unit09 MinVolt,CMU09 Min,22B0B3,((a*256+b)/2000)+1,2.5,4.4,V,781,,,
+.00_BMS Unit09 MaxVolt,CMU09 Max,22B0B3,((c*256+d)/2000)+1,2.5,4.4,V,781,,,
+.00_BMS Unit09 Temp2,CMU09 Temp2,22B0B3,(e/2)-40,0,60,C,781,,,
+.00_BMS Unit09 Temp1,CMU09 Temp1,22B0B3,(f/2)-40,0,60,C,781,,,
+.00_BMS Unit09 Circuit Temp,CMU09 Circuit,22B0B3,(g/2)-40,0,60,C,781,,,
