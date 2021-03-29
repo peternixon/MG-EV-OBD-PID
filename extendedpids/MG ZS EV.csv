@@ -9,6 +9,7 @@
 "001_BMS Status","BMS Status","0x22b048","LOOKUP(A:A:1='ready/idle off':3='running':6='charging':10='connected not charging')",0,100,"Status","781","","",1
 
 "001_Vehicle Speed","Speed","0x22ba00","ABS(((A*255 + B)-19922)/100)",0,160,"km/h","7E3","","",1
+"001_12V Battery Voltage","12V Battery","0x220112","A/10",0,16,"V","7E3","","",1
 "001_Max Charge Rate","Charge kW","0x22b402","(A*255 + B)/10",0,160,"kW","7E3","","",1
 "001_Engine Speed Real","RPM Real","0x22b402","(A*255 + B) - 32640)",0,10000,"rpm","7E3","","",1
 "001_Engine Speed","RPM",,"ABS(VAL{001_Engine Speed Real})",0,10000,"rpm",,"","",1
@@ -16,3 +17,5 @@
 "001_Odometer Reading","Odometer","0x22b101","(A*255*255 + B*255 + C) + 6",0,3000000,"km","760","","",1
 
 "001_Cell Voltage Delta","Volt Delta",,(VAL{001_Max Cell Voltage} - VAL{001_Min Cell Voltage}) * 1000,0,10,"mV",,"","",1
+
+"001_Blower Speed","Blower Speed","0x22e00f","A",0,4,"X","750","","",1
