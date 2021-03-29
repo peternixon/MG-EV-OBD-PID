@@ -1,7 +1,19 @@
 "Name", "ShortName", "ModeAndPID", "Equation", "Min Value", "Max Value", "Units", "Header", "startDiagnostic", "stopDiagnostic", "Scale"
 "001_Battery Coolant Temp","Batt Coolant","0x22b05c","A",0,100,"CFXX","781","","",1
 
-"001_Ambient Temperature","Air Temp","0x22e01b","B/2 + 40",0,10000,"C","750","","",1
+"001_Ambient Temperature","Air Temp","0x22e01b","B/2 + 40",0,100,"CX","750","","",1
 
-"001_Tire Pressure FL","Tire Pressure FL","0x22b0b1","A",0,10000,"PSI","724","","",1
+"001_FL Face Outlet Temp","Face Temp","0x22e013","((A*255 + B) / 2) - 30",0,100,"CX","750","","",1
 
+
+"001_Tire Pressure FL","Tire Pressure FL","0x22b001","A",0,300,"PSIXX","724","","",1
+"001_Tire Pressure FR","Tire Pressure FR","0x22b001","B",0,300,"PSIXX","724","","",1
+"001_Tire Pressure RR","Tire Pressure RR","0x22b001","C",0,300,"PSIXX","724","","",1
+"001_Tire Pressure RL","Tire Pressure RL","0x22b001","D",0,300,"PSIXX","724","","",1
+
+"001_Tire Temp FL","Tire Temp FL","0x22b003","A",0,100,"CFXX","724","","",1
+"001_Tire Temp FR","Tire Temp FR","0x22b003","B",0,100,"CFXX","724","","",1
+"001_Tire Temp RR","Tire Temp RR","0x22b003","C",0,100,"CFXX","724","","",1
+"001_Tire Temp RL","Tire Temp RL","0x22b003","D",0,100,"CFXX","724","","",1
+
+"001_12V Supply Voltage (VCU)","12V Battery","0x220112","A/10",0,16,"V","7E3","","",1
