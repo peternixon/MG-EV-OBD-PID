@@ -7,7 +7,9 @@ These codes are primarily for use with Torque Pro which runs on Android phones a
 
 Download https://github.com/peternixon/MG-EV-OBD-PID/archive/refs/heads/main.zip and extract the "extendedpids\MG ZS EV.csv" file into the ".torque\extendedpids\" directory on your phone then import it from the "Settings \ Manage extra PIDs/Sensors \ Add predefined set \ MG ZS EV" Menu in the Torque Pro app.
 
-If you wish, you can also use my sample dashbard by extracting the "dashboards\MG ZS EV.dash" file into the ".torque\dashboards\" directory on your phone then importing it into Torque Pro.
+The Torque wiki has more details at https://torquebhp.fandom.com/wiki/How_to_add_extended_PIDs
+
+If you wish, you can also use my sample dashbard by extracting the "dashboards\MG ZS EV.dash" file into the ".torque\dashboards\" directory on your phone then inside the Torque app, go to realtime data and select the gear icon, then select "Layout Settings", then select "Import" and select "MG ZS EV.dash".
 
 ## What hardware do I need?
 Any Bluetooth Diagnostic Scanner supported by Torque Pro connected to an android phone or tablet should be fine however testing is being done with an NX101 Pro with PIC18F25K80 Chip
