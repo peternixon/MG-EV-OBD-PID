@@ -12,8 +12,12 @@
 "001_Vehicle Speed","Speed","0x22ba00","ABS((INT16(A:B)- 20000)/100)",0,160,"km/h","7E3","","",1
 "001_12V Battery Voltage","12V Battery","0x220112","A/10",0,16,"V","7E3","","",1
 "001_Max Charge Rate","Charge kW","0x22b402","INT16(A:B)/10",0,160,"kW","7E3","","",1
-"001_Engine Speed Real","RPM Real","0x22b402","INT16(A:B) - 32640)",0,10000,"rpm","7E3","","",1
+"001_Engine Speed Real","RPM Real","0x22b402","INT16(A:B) - 32767)",-1000,10000,"rpm","7E3","","",1
 "001_Engine Speed","RPM",,"ABS(VAL{001_Engine Speed Real})",0,10000,"rpm",,"","",1
+"001_Fan","Fan","0x22bb91","A",0,1,"","7E3","","",1
+"001_Motor Power","Motor Power","","(VAL{..eZS Motor Speed} * VAL{..eZS Motor Torque})/10000",-50,100,"kW","","","",1
+"001_Motor Temp","Motor","0x22b405","A-40",0,60,"C","7E3","","",1
+"001_Motor Torque","Motor Torque","0x22b401","(INT16(A:B)-32767)/10",-100,360,"Nm","7E3","","",1
 "001_Outside Temp","Temp","0x22bb05","A-40",0,50,"C","7E3","","",1
 
 "001_Odometer Reading","Odometer","0x22b101","INT24(A:B:C)",0,3000000,"km","760","","",1
