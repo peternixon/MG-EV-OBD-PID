@@ -50,47 +50,47 @@
 "MG BMS SystemMainRelayG","SMRG","0x22b04a","a",0,1,"","781","","",1
 "MG BMS SystemMainRelayP","SMRP","0x22b052","a",0,1,"","781","","",1
 "MG BMS Unit01 Circuit Temp","CMU01 Circuit","0x22b001","(g/2)-40",0,60,"C","781","","",1
-"MG BMS Unit01 MaxVolt","CMU01 Max","0x22b001","((c*256+d)/2000)+1",2.5,4.400000095367432,"V","781","","",1
-"MG BMS Unit01 MinVolt","CMU01 Min","0x22b001","((a*256+b)/2000)+1",2.5,4.400000095367432,"V","781","","",1
+"MG BMS Unit01 MaxVolt","CMU01 Max","0x22b001","(INT16(C:D)/2000)+1",2.5,4.400000095367432,"V","781","","",1
+"MG BMS Unit01 MinVolt","CMU01 Min","0x22b001","(INT16(A:B)/2000)+1",2.5,4.400000095367432,"V","781","","",1
 "MG BMS Unit01 Temp1","CMU01 Temp1","0x22b001","(f/2)-40",0,60,"C","781","","",1
 "MG BMS Unit01 Temp2","CMU01 Temp2","0x22b001","(e/2)-40",0,60,"C","781","","",1
 "MG BMS Unit02 Circuit Temp","CMU02 Circuit","0x22b009","(g/2)-40",0,60,"C","781","","",1
-"MG BMS Unit02 MaxVolt","CMU02 Max","0x22b009","((c*256+d)/2000)+1",2.5,4.400000095367432,"V","781","","",1
-"MG BMS Unit02 MinVolt","CMU02 Min","0x22b009","((a*256+b)/2000)+1",2.5,4.400000095367432,"V","781","","",1
+"MG BMS Unit02 MaxVolt","CMU02 Max","0x22b009","(INT16(C:D)/2000)+1",2.5,4.400000095367432,"V","781","","",1
+"MG BMS Unit02 MinVolt","CMU02 Min","0x22b009","(INT16(A:B)/2000)+1",2.5,4.400000095367432,"V","781","","",1
 "MG BMS Unit02 Temp1","CMU02 Temp1","0x22b009","(f/2)-40",0,60,"C","781","","",1
 "MG BMS Unit02 Temp2","CMU02 Temp2","0x22b009","(e/2)-40",0,60,"C","781","","",1
 "MG BMS Unit03 Circuit Temp","CMU03 Circuit","0x22b011","(g/2)-40",0,60,"C","781","","",1
-"MG BMS Unit03 MaxVolt","CMU03 Max","0x22b011","((c*256+d)/2000)+1",2.5,4.400000095367432,"V","781","","",1
-"MG BMS Unit03 MinVolt","CMU03 Min","0x22b011","((a*256+b)/2000)+1",2.5,4.400000095367432,"V","781","","",1
+"MG BMS Unit03 MaxVolt","CMU03 Max","0x22b011","(INT16(C:D)/2000)+1",2.5,4.400000095367432,"V","781","","",1
+"MG BMS Unit03 MinVolt","CMU03 Min","0x22b011","(INT16(A:B)/2000)+1",2.5,4.400000095367432,"V","781","","",1
 "MG BMS Unit03 Temp1","CMU03 Temp1","0x22b011","(f/2)-40",0,60,"C","781","","",1
 "MG BMS Unit03 Temp2","CMU03 Temp2","0x22b011","(e/2)-40",0,60,"C","781","","",1
 "MG BMS Unit04 Circuit Temp","CMU04 Circuit","0x22b019","(g/2)-40",0,60,"C","781","","",1
-"MG BMS Unit04 MaxVolt","CMU04 Max","0x22b019","((c*256+d)/2000)+1",2.5,4.400000095367432,"V","781","","",1
-"MG BMS Unit04 MinVolt","CMU04 Min","0x22b019","((a*256+b)/2000)+1",2.5,4.400000095367432,"V","781","","",1
+"MG BMS Unit04 MaxVolt","CMU04 Max","0x22b019","(INT16(C:D)/2000)+1",2.5,4.400000095367432,"V","781","","",1
+"MG BMS Unit04 MinVolt","CMU04 Min","0x22b019","(INT16(A:B)/2000)+1",2.5,4.400000095367432,"V","781","","",1
 "MG BMS Unit04 Temp1","CMU04 Temp1","0x22b019","(f/2)-40",0,60,"C","781","","",1
 "MG BMS Unit04 Temp2","CMU04 Temp2","0x22b019","(e/2)-40",0,60,"C","781","","",1
 "MG BMS Unit05 Circuit Temp","CMU05 Circuit","0x22b021","(g/2)-40",0,60,"C","781","","",1
-"MG BMS Unit05 MaxVolt","CMU05 Max","0x22b021","((c*256+d)/2000)+1",2.5,4.400000095367432,"V","781","","",1
-"MG BMS Unit05 MinVolt","CMU05 Min","0x22b021","((a*256+b)/2000)+1",2.5,4.400000095367432,"V","781","","",1
+"MG BMS Unit05 MaxVolt","CMU05 Max","0x22b021","(INT16(C:D)/2000)+1",2.5,4.400000095367432,"V","781","","",1
+"MG BMS Unit05 MinVolt","CMU05 Min","0x22b021","(INT16(A:B)/2000)+1",2.5,4.400000095367432,"V","781","","",1
 "MG BMS Unit05 Temp1","CMU05 Temp1","0x22b021","(f/2)-40",0,60,"C","781","","",1
 "MG BMS Unit05 Temp2","CMU05 Temp2","0x22b021","(e/2)-40",0,60,"C","781","","",1
 "MG BMS Unit06 Circuit Temp","CMU06 Circuit","0x22b029","(g/2)-40",0,60,"C","781","","",1
-"MG BMS Unit06 MaxVolt","CMU06 Max","0x22b029","((c*256+d)/2000)+1",2.5,4.400000095367432,"V","781","","",1
-"MG BMS Unit06 MinVolt","CMU06 Min","0x22b029","((a*256+b)/2000)+1",2.5,4.400000095367432,"V","781","","",1
+"MG BMS Unit06 MaxVolt","CMU06 Max","0x22b029","(INT16(C:D)/2000)+1",2.5,4.400000095367432,"V","781","","",1
+"MG BMS Unit06 MinVolt","CMU06 Min","0x22b029","(INT16(A:B)/2000)+1",2.5,4.400000095367432,"V","781","","",1
 "MG BMS Unit06 Temp1","CMU06 Temp1","0x22b029","(f/2)-40",0,60,"C","781","","",1
 "MG BMS Unit06 Temp2","CMU06 Temp2","0x22b029","(e/2)-40",0,60,"C","781","","",1
 "MG BMS Unit07 Circuit Temp","CMU07 Circuit","0x22b0a3","(g/2)-40",0,60,"C","781","","",1
-"MG BMS Unit07 MaxVolt","CMU07 Max","0x22b0a3","((c*256+d)/2000)+1",2.5,4.400000095367432,"V","781","","",1
-"MG BMS Unit07 MinVolt","CMU07 Min","0x22b0a3","((a*256+b)/2000)+1",2.5,4.400000095367432,"V","781","","",1
+"MG BMS Unit07 MaxVolt","CMU07 Max","0x22b0a3","(INT16(C:D)/2000)+1",2.5,4.400000095367432,"V","781","","",1
+"MG BMS Unit07 MinVolt","CMU07 Min","0x22b0a3","(INT16(A:B)/2000)+1",2.5,4.400000095367432,"V","781","","",1
 "MG BMS Unit07 Temp1","CMU07 Temp1","0x22b0a3","(f/2)-40",0,60,"C","781","","",1
 "MG BMS Unit07 Temp2","CMU07 Temp2","0x22b0a3","(e/2)-40",0,60,"C","781","","",1
 "MG BMS Unit08 Circuit Temp","CMU08 Circuit","0x22b0ab","(g/2)-40",0,60,"C","781","","",1
-"MG BMS Unit08 MaxVolt","CMU08 Max","0x22b0ab","((c*256+d)/2000)+1",2.5,4.400000095367432,"V","781","","",1
-"MG BMS Unit08 MinVolt","CMU08 Min","0x22b0ab","((a*256+b)/2000)+1",2.5,4.400000095367432,"V","781","","",1
+"MG BMS Unit08 MaxVolt","CMU08 Max","0x22b0ab","(INT16(C:D)/2000)+1",2.5,4.400000095367432,"V","781","","",1
+"MG BMS Unit08 MinVolt","CMU08 Min","0x22b0ab","(INT16(A:B)/2000)+1",2.5,4.400000095367432,"V","781","","",1
 "MG BMS Unit08 Temp1","CMU08 Temp1","0x22b0ab","(f/2)-40",0,60,"C","781","","",1
 "MG BMS Unit08 Temp2","CMU08 Temp2","0x22b0ab","(e/2)-40",0,60,"C","781","","",1
 "MG BMS Unit09 Circuit Temp","CMU09 Circuit","0x22b0b3","(g/2)-40",0,60,"C","781","","",1
-"MG BMS Unit09 MaxVolt","CMU09 Max","0x22b0b3","((c*256+d)/2000)+1",2.5,4.400000095367432,"V","781","","",1
-"MG BMS Unit09 MinVolt","CMU09 Min","0x22b0b3","((a*256+b)/2000)+1",2.5,4.400000095367432,"V","781","","",1
+"MG BMS Unit09 MaxVolt","CMU09 Max","0x22b0b3","(INT16(C:D)/2000)+1",2.5,4.400000095367432,"V","781","","",1
+"MG BMS Unit09 MinVolt","CMU09 Min","0x22b0b3","(INT16(A:B)/2000)+1",2.5,4.400000095367432,"V","781","","",1
 "MG BMS Unit09 Temp1","CMU09 Temp1","0x22b0b3","(f/2)-40",0,60,"C","781","","",1
 "MG BMS Unit09 Temp2","CMU09 Temp2","0x22b0b3","(e/2)-40",0,60,"C","781","","",1
