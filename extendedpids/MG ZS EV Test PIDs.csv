@@ -1,3 +1,0 @@
-"Name", "ShortName", "ModeAndPID", "Equation", "Min Value", "Max Value", "Units", "Header", "startDiagnostic", "stopDiagnostic", "Scale"
-"001_Accelerator","Accelerator","0x22b100","A",0,160,"x","7E3","","",1
-"001_BMS Version","BMS Version","0x22f194","A",0,100,"Ver","781","","",1
