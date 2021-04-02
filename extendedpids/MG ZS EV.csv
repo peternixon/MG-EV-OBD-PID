@@ -14,7 +14,7 @@
 "MG Vehicle Speed","Speed",,"ABS(VAL{MG Vehicle Speed Actual})",0,200,"km/h","7E3","","",1
 "MG 12V Battery Voltage","12V Battery","0x220112","A/10",0,16,"V","7E3","","",1
 "MG Max Charge Rate","Charge kW","0x22b402","INT16(A:B)/10",0,160,"kW","7E3","","",1
-"MG Motor Speed Actual","RPM","0x22b402","INT16(A:B) - 32767)",-1000,10000,"rpm","7E3","","",1
+"MG Motor Speed Actual","RPM","0x22b402","INT16(A:B) - 32767",-1000,10000,"rpm","7E3","","",1
 "MG Motor Speed","RPM",,"ABS(VAL{MG Motor Speed Actual})",0,10000,"rpm",,"","",1
 "MG Fan","Fan","0x22bb91","A",0,1,"","7E3","","",1
 "MG Motor Power","Motor Power","","(VAL{MG Motor Speed} * VAL{MG Motor Torque})/10000",-50,100,"kW","","","",1
