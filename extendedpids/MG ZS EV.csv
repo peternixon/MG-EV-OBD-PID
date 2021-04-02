@@ -20,6 +20,7 @@
 "MG Motor Power","Motor Power","","(VAL{MG Motor Speed} * VAL{MG Motor Torque})/10000",-50,100,"kW","","","",1
 "MG Motor Temp","Motor","0x22b405","A-40",0,60,"C","7E3","","",1
 "MG Motor Torque","Motor Torque","0x22b401","(INT16(A:B)-32767)/10",-100,360,"Nm","7E3","","",1
+"MG Air Comp","Air","0x22bb01","INT16(A:B)/100",0,7,"kW","7E3","","",1
 "MG Outside Temp","Temp","0x22bb05","A-40",0,50,"C","7E3","","",1
 
 "MG Odometer Reading","Odometer","0x22b101","INT24(A:B:C)",0,3000000,"km","760","","",1
