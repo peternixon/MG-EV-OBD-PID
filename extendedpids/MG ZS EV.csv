@@ -6,8 +6,10 @@
 "MG Battery State of Charge","SoC","0x22b046","INT16(A:B)/10",0,100,"%","781","","",1
 "MG Battery Coolant Temp","Batt Coolant","0x22b05c","(A * 0.5) - 40.0",0,100,"C","781","","",1
 "MG Battery State of Health","SoH","0x22b061","INT16(A:B)/100",0,100,"%","781","","",1
-"MG Max Cell Voltage","Max Cell Volts","0x22b058","INT16(A:B)/1000",0,4.2,"V","781","","",1
-"MG Min Cell Voltage","Min Cell Volts","0x22b059","INT16(A:B)/1000",0,4.2,"V","781","","",1
+"MG Max Voltage","MaxVolt","0x22b058","INT16(A:B)/1000",2.5,4.4,"V","781","","",1
+"MG Max Cell Voltage","MaxVoltCell","0x22b058","C",0,255,"","781","","",1
+"MG Min Voltage","MinVolt","0x22b059","INT16(A:B)/1000",2.5,4.4,"V","781","","",1
+"MG Min Cell Voltage","MinVoltCell","0x22b059","C",0,255,"","781","","",1
 "MG BMS Status","BMS Status","0x22b048","LOOKUP(A:A:1='ready/idle off':3='running':6='charging':10='connected not charging')",0,100,"Status","781","","",1
 
 "MG Vehicle Speed Actual","Speed","0x22ba00","(INT16(A:B)- 20000)/100",-200,200,"km/h","7E3","","",1
@@ -24,8 +26,9 @@
 "MG Outside Temp","Temp","0x22bb05","A-40",0,50,"C","7E3","","",1
 
 "MG Odometer Reading","Odometer","0x22b101","INT24(A:B:C)",0,3000000,"km","760","","",1
+"MG Coolant","Coolant","0x22b309","A-40",0,60,"C","7E3","","",1
 
-"MG Cell Voltage Delta","Cell Delta",,(VAL{MG Max Cell Voltage} - VAL{MG Min Cell Voltage}) * 1000,0,1000,"mV",,"","",1
+"MG BMS Voltage Delta","Cell Delta",,(VAL{MG Max Voltage} - VAL{MG Min Voltage}) * 1000,0,1000,"mV",,"","",1
 
 "MG Ambient Temperature","Air Temp","0x22e01b","INT16(A:B) / 10.0 - 40",0,50,"C","750","","",1
 "MG HVAC Temp","HVAC Temp","0x22e013","(INT16(A:B) / 10) - 30",0,100,"C","750","","",1
