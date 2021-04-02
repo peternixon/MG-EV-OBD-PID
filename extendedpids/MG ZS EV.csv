@@ -23,7 +23,7 @@
 
 "MG Odometer Reading","Odometer","0x22b101","INT24(A:B:C)",0,3000000,"km","760","","",1
 
-"MG Cell Voltage Delta","Volt Delta",,(VAL{MG Max Cell Voltage} - VAL{MG Min Cell Voltage}) * 1000,0,10,"mV",,"","",1
+"MG Cell Voltage Delta","Cell Delta",,(VAL{MG Max Cell Voltage} - VAL{MG Min Cell Voltage}) * 1000,0,1000,"mV",,"","",1
 
 "MG Ambient Temperature","Air Temp","0x22e01b","INT16(A:B) / 10.0 - 40",0,50,"C","750","","",1
 "MG HVAC Temp","HVAC Temp","0x22e013","(INT16(A:B) / 10) - 30",0,100,"C","750","","",1
