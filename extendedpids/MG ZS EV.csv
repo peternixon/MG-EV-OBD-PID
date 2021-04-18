@@ -10,7 +10,7 @@
 "MG Max Cell Voltage","MaxVoltCell","0x22b058","C",0,255,"","781","","",1
 "MG Min Voltage","MinVolt","0x22b059","INT16(A:B)/1000",2.5,4.4,"V","781","","",1
 "MG Min Cell Voltage","MinVoltCell","0x22b059","C",0,255,"","781","","",1
-"MG BMS Status","BMS Status","0x22b048","LOOKUP(A:A:1='ready/idle off':3='running':6='charging':10='connected not charging')",0,100,"Status","781","","",1
+"MG BMS Status","BMS Status","0x22b048","LOOKUP(A:A:1='ready/idle off':3='running':6='charging':7='charging':10='connected not charging')",0,100,"Status","781","","",1
 
 "MG Vehicle Speed Actual","Speed","0x22ba00","(INT16(A:B)- 20000)/100",-200,200,"km/h","7E3","","",1
 "MG Vehicle Speed","Speed",,"ABS(VAL{MG Vehicle Speed Actual})",0,200,"km/h",,"","",1
@@ -34,10 +34,10 @@
 "MG HVAC Temp","HVAC Temp","0x22e013","(INT16(A:B) / 10) - 30",0,100,"C","750","","",1
 "MG HVAC Blower Speed","Blower","0x22e00f","A",0,4,"Speed","750","","",1
 
-"MG Tire Pressure FL","Tire Pressure FL","0x22b001","A*4",0,300,"kPa","724","","",1
-"MG Tire Pressure FR","Tire Pressure FR","0x22b001","B*4",0,300,"kPa","724","","",1
-"MG Tire Pressure RR","Tire Pressure RR","0x22b001","C*4",0,300,"kPa","724","","",1
-"MG Tire Pressure RL","Tire Pressure RL","0x22b001","D*4",0,300,"kPa","724","","",1
+"MG Tire Pressure FL","Tire Pressure FL","0x22b001","A*0.58",0,50,"PSI","724","","",1
+"MG Tire Pressure FR","Tire Pressure FR","0x22b001","B*0.58",0,50,"PSI","724","","",1
+"MG Tire Pressure RR","Tire Pressure RR","0x22b001","C*0.58",0,50,"PSI","724","","",1
+"MG Tire Pressure RL","Tire Pressure RL","0x22b001","D*0.58",0,50,"PSI","724","","",1
 
 "MG Tire Temp FL","Tire Temp FL","0x22b003","A/2",0,100,"C","724","","",1
 "MG Tire Temp FR","Tire Temp FR","0x22b003","B/2",0,100,"C","724","","",1
@@ -99,3 +99,12 @@
 "MG BMS Unit09 MinVolt","CMU09 Min","0x22b0b3","(INT16(A:B)/2000)+1",2.5,4.400000095367432,"V","781","","",1
 "MG BMS Unit09 Temp1","CMU09 Temp1","0x22b0b3","(f/2)-40",0,60,"C","781","","",1
 "MG BMS Unit09 Temp2","CMU09 Temp2","0x22b0b3","(e/2)-40",0,60,"C","781","","",1
+"MG Charging Rate","Charge","","(VAL{MG Battery Voltage}*VAL{MG Battery Current}/1000)*-1",0,60,"C","781","","",1
+"MG SoC Corrected","SoC Corr","","1.095*(Val{MG State of Charge}-5)",0,100,"Batt%","","","",1
+"MG SoC Display","SoC Corr","","LOOKUP(VAL{MG SoC Corrected}::-10~0=0)",0,100,"Batt%","","","",1
+"MG OAT Factored","OAT","","LOOKUP(VAL{MG Outside Temp}::25~50=25)",-10,50,"C","","","",1
+"MG Consumption Reference 60mph","Cons Ref 60","","3.8",0,10,"m/Kwh","","","",1
+"MG Consumption Reference 70mph","Cons Ref 60","","VAL{MG Consumption Reference 60mph}/((70/60)*(70/60))",0,10,"m/Kwh","","","",1
+"MG Range at 60mph","Range","","((42*VAL{MG Consumption Reference 60mph})*(1-((25-VAL{MG OAT Factored})/100)))*VAL{MG SoC Display}/100",0,10,"m/Kwh","","","",1
+"MG Target Consumption at 60MPH","Target 60","","VAL{MG Range at 60MPH}/(42*(VAL{MG SOC Display}/100))",0,10,"m/Kwh","","","",1
+"MG Range Charger to Charger","Charger","","((42*VAL{MG Consumption Reference 60mph})*(1-((25-VAL{MG OAT Factored})/100)))*(85-15)/100",0,200,"Range","","","",1
