@@ -34,10 +34,10 @@
 "MG HVAC Temp","HVAC Temp","0x22e013","(INT16(A:B) / 10) - 30",0,100,"C","750","","",1
 "MG HVAC Blower Speed","Blower","0x22e00f","A",0,4,"Speed","750","","",1
 
-"MG Tire Pressure FL","Tire Pressure FL","0x22b001","A*0.58",0,50,"PSI","724","","",1
-"MG Tire Pressure FR","Tire Pressure FR","0x22b001","B*0.58",0,50,"PSI","724","","",1
-"MG Tire Pressure RR","Tire Pressure RR","0x22b001","C*0.58",0,50,"PSI","724","","",1
-"MG Tire Pressure RL","Tire Pressure RL","0x22b001","D*0.58",0,50,"PSI","724","","",1
+"MG Tire Pressure FL","Tire Pressure FL","0x22b001","A*4",0,50,"kPa","724","","",1
+"MG Tire Pressure FR","Tire Pressure FR","0x22b001","B*4",0,50,"kPa","724","","",1
+"MG Tire Pressure RR","Tire Pressure RR","0x22b001","C*4",0,50,"kPa","724","","",1
+"MG Tire Pressure RL","Tire Pressure RL","0x22b001","D*4",0,50,"kPa","724","","",1
 
 "MG Tire Temp FL","Tire Temp FL","0x22b003","A/2",0,100,"C","724","","",1
 "MG Tire Temp FR","Tire Temp FR","0x22b003","B/2",0,100,"C","724","","",1
