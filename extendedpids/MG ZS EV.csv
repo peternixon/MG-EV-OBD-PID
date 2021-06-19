@@ -4,6 +4,7 @@
 "MG Battery Current","Current","0x22b043","(INT16(A:B) - 40000) * 0.25 / 10",-200,200,"A","781","","",1
 "MG Battery Resistance","Resistance","0x22b045","INT16(A:B)/2",0,8190.5,"Ohm","781","","",1
 "MG Battery State of Charge RAW","SoC Raw","0x22b046","INT16(A:B)/10",0,100,"%","781","","",1
+"MG HV Battery Temp","Batt Temp","0x22b056","(A/2)-40",0,50,"c","781","","",1
 "MG Battery Coolant Temp","Batt Coolant","0x22b05c","(A * 0.5) - 40.0",0,100,"C","781","","",1
 "MG Battery State of Health","SoH","0x22b061","INT16(A:B)/100",0,100,"%","781","","",1
 "MG Max Voltage","MaxVolt","0x22b058","INT16(A:B)/1000",2.5,4.4,"V","781","","",1
