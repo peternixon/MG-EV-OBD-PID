@@ -1,0 +1,10 @@
+"Name", "ShortName", "ModeAndPID", "Equation", "Min Value", "Max Value", "Units", "Header", "startDiagnostic", "stopDiagnostic", "Scale"
+"MGZSEV_Cons_60MPH","Cons 60","","3.8",0,10,"m/Kwh","","","",1
+"MGZSEV_Range_60MPH","Range","","(42*VAL{MGZSEV_Cons_60MPH})*(1-((25-VAL{XX_OAT_Factored})/100))*(VAL{MG Battery State of Charge}/100)*(VAL{MG Battery State of Health}/100)",0,200,"max 60mph","","","",1
+"MGZSEV_Range_70MPH","Range","","(42*VAL{XX_Cons_70MPH})*(1-((25-VAL{XX_OAT_Factored})/100))*(VAL{MG Battery State of Charge}/100)*(VAL{MG Battery State of Health}/100)",0,200,"max 70mph","","","",1
+"MGZSEV_Range_Charger_To_Charger","Charger","","((42*VAL{MGZSEV_Cons_60MPH})*(1-((25-VAL{XX_OAT_Factored})/100)))*(85-15)/100",1,200,"Range","","","",1
+"MGZSEV_Target_Cons_60MPH","Target m/kwh","","VAL{MGZSEV_Range_60MPH}/(42*(VAL{MG Battery State of Charge}/100))",0,10,"max 60mph","","","",1
+"MGZSEV_Target_Cons_70MPH","Target m/kwh","","VAL{MGZSEV_Range_70MPH}/(42*(VAL{MG Battery State of Charge}/100))",0,10,"max 70mph","","","",1
+
+"XX_Cons_70MPH","not for display","","VAL{MGZSEV_Cons_60MPH}/((70/60)*(70/60))",1,10,"m/Kwh","","","",1
+"XX_OAT_Factored","not for display","","LOOKUP(VAL{MG Outside Temp}::25~50=25)",-10,50,"C","","","",1
