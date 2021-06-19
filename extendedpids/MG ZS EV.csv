@@ -103,6 +103,15 @@
 "MG BMS CMU09 Temp1","CMU09 Temp1","0x22b0b3","(f/2)-40",0,60,"C","781","","",1
 "MG BMS CMU09 Temp2","CMU09 Temp2","0x22b0b3","(e/2)-40",0,60,"C","781","","",1
 
+"MG BMS CMU01 Voltage Imbalance","CMU01 Imbalance",,(VAL{MG BMS CMU01 MaxVolt} - VAL{MG BMS CMU01 MinVolt}) * 1000,0,1000,"mV",,"","",1
+"MG BMS CMU02 Voltage Imbalance","CMU01 Imbalance",,(VAL{MG BMS CMU02 MaxVolt} - VAL{MG BMS CMU02 MinVolt}) * 1000,0,1000,"mV",,"","",1
+"MG BMS CMU03 Voltage Imbalance","CMU01 Imbalance",,(VAL{MG BMS CMU03 MaxVolt} - VAL{MG BMS CMU03 MinVolt}) * 1000,0,1000,"mV",,"","",1
+"MG BMS CMU04 Voltage Imbalance","CMU01 Imbalance",,(VAL{MG BMS CMU04 MaxVolt} - VAL{MG BMS CMU04 MinVolt}) * 1000,0,1000,"mV",,"","",1
+"MG BMS CMU05 Voltage Imbalance","CMU01 Imbalance",,(VAL{MG BMS CMU05 MaxVolt} - VAL{MG BMS CMU05 MinVolt}) * 1000,0,1000,"mV",,"","",1
+"MG BMS CMU06 Voltage Imbalance","CMU01 Imbalance",,(VAL{MG BMS CMU06 MaxVolt} - VAL{MG BMS CMU06 MinVolt}) * 1000,0,1000,"mV",,"","",1
+"MG BMS CMU07 Voltage Imbalance","CMU01 Imbalance",,(VAL{MG BMS CMU07 MaxVolt} - VAL{MG BMS CMU07 MinVolt}) * 1000,0,1000,"mV",,"","",1
+"MG BMS CMU08 Voltage Imbalance","CMU01 Imbalance",,(VAL{MG BMS CMU08 MaxVolt} - VAL{MG BMS CMU08 MinVolt}) * 1000,0,1000,"mV",,"","",1
+"MG BMS CMU09 Voltage Imbalance","CMU01 Imbalance",,(VAL{MG BMS CMU09 MaxVolt} - VAL{MG BMS CMU09 MinVolt}) * 1000,0,1000,"mV",,"","",1
 
 "XX_BMS_SW_Ver_Raw","not for display","0x22f194","INT24(H:I:J)",0,1000000,"","781","","",1
 "MG BMS SW Version","BMS SW","","LOOKUP(VAL{XX_BMS_SW_Ver_Raw}:'???':4272177='A01':5386551='R17':4543793='EU1':5387312='R40':5386808='R28':5387058='R32')",0,1,"","","","",1
