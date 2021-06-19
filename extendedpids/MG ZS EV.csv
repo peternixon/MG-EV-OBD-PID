@@ -10,7 +10,7 @@
 "MG Max Cell Voltage","MaxVoltCell","0x22b058","C",0,255,"","781","","",1
 "MG Min Voltage","MinVolt","0x22b059","INT16(A:B)/1000",2.5,4.4,"V","781","","",1
 "MG Min Cell Voltage","MinVoltCell","0x22b059","C",0,255,"","781","","",1
-"MG BMS Status","BMS Status","0x22b048","LOOKUP(A:A:1='ready/idle off':3='running':6='charging':10='connected not charging')",0,100,"Status","781","","",1
+"MG BMS Status","BMS Status","0x22b048","LOOKUP(A:A:1='ready/idle off':3='running':6='charging':7='charging':10='connected not charging')",0,100,"Status","781","","",1
 
 "MG Vehicle Speed Actual","Speed","0x22ba00","(INT16(A:B)- 20000)/100",-200,200,"km/h","7E3","","",1
 "MG Vehicle Speed","Speed",,"ABS(VAL{MG Vehicle Speed Actual})",0,200,"km/h",,"","",1
