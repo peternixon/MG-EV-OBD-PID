@@ -3,7 +3,7 @@
 "MG Battery Voltage","Battery","0x22b042","INT16(A:B) * 0.25",0,456,"V","781","","",1
 "MG Battery Current","Current","0x22b043","(INT16(A:B) - 40000) * 0.25 / 10",-200,200,"A","781","","",1
 "MG Battery Resistance","Resistance","0x22b045","INT16(A:B)/2",0,8190.5,"Ohm","781","","",1
-"MG Battery State of Charge","SoC","0x22b046","INT16(A:B)/10",0,100,"%","781","","",1
+"MG Battery State of Charge RAW","SoC Raw","0x22b046","INT16(A:B)/10",0,100,"%","781","","",1
 "MG Battery Coolant Temp","Batt Coolant","0x22b05c","(A * 0.5) - 40.0",0,100,"C","781","","",1
 "MG Battery State of Health","SoH","0x22b061","INT16(A:B)/100",0,100,"%","781","","",1
 "MG Max Voltage","MaxVolt","0x22b058","INT16(A:B)/1000",2.5,4.4,"V","781","","",1
@@ -11,6 +11,7 @@
 "MG Min Voltage","MinVolt","0x22b059","INT16(A:B)/1000",2.5,4.4,"V","781","","",1
 "MG Min Cell Voltage","MinVoltCell","0x22b059","C",0,255,"","781","","",1
 "MG BMS Status","BMS Status","0x22b048","LOOKUP(A:A:1='ready/idle off':3='running':6='charging':7='charging':10='connected not charging')",0,100,"Status","781","","",1
+"MG Battery State of Charge","SoC","","LOOKUP(1.1*(VAL{MG Battery State of Charge RAW}+VAL{XX_BMS_Version_SoC _Factor})::-10~0=0:100~110=100)",0,100,"%","","","",1
 "MG Charging Rate","Charge","","(VAL{MG Battery Voltage}*VAL{MG Battery Current}/1000)*-1",-80,80,"kW","","","",1
 
 "MG Vehicle Speed Actual","Speed","0x22ba00","(INT16(A:B)- 20000)/100",-200,200,"km/h","7E3","","",1
@@ -100,3 +101,8 @@
 "MG BMS Unit09 MinVolt","CMU09 Min","0x22b0b3","(INT16(A:B)/2000)+1",2.5,4.400000095367432,"V","781","","",1
 "MG BMS Unit09 Temp1","CMU09 Temp1","0x22b0b3","(f/2)-40",0,60,"C","781","","",1
 "MG BMS Unit09 Temp2","CMU09 Temp2","0x22b0b3","(e/2)-40",0,60,"C","781","","",1
+
+
+"XX_BMS_SW_Ver_Raw","not for display","0x22f194","INT24(H:I:J)",0,1000000,"","781","","",1
+"MG BMS SW Version","BMS SW","","LOOKUP(VAL{XX_BMS_SW_Ver_Raw}:'???':4272177='A01':5386551='R17':4543793='EU1':5387312='R40':5386808='R28':5387058='R32')",0,1,"","","","",1
+"XX_BMS_Version_SoC _Factor","not for display","","LOOKUP(VAL{MG BMS SW Version}:-2:5386551=-5:5387312=-5:5386808=-5:5387058=-3)",-100,100,"","","","",1
