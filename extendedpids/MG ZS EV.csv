@@ -13,6 +13,7 @@
 "MG Min Cell Voltage","MinVoltCell","0x22b059","C",0,255,"","781","","",1
 "MG BMS Status","BMS Status","0x22b048","LOOKUP(A:A:0='connected unlocked':1='idle':3='running':6='charging':7='rapid charging':8='sleepy':10='connected':12='charge starting')",0,100,"Status","781","","",1
 "MG BMS Charge Bool","BMS Status","0x22b048","LOOKUP(A:0:0=0:1=0:3=0:6=1:7=1:8=0:10=0:12=0)",0,1,"Status","781","","",1
+"MG Estimated Range (GOM)","Range","0x22b0ce","INT16(A:B)/10",0,300,"km","781","","",1
 "MG Battery State of Charge","SoC","","LOOKUP(1.1*(VAL{MG Battery State of Charge RAW}+VAL{XX_BMS_Version_SoC _Factor})::-10~0=0:100~110=100)",0,100,"%","","","",1
 "MG Charging Rate","Charge","","(VAL{MG Battery Voltage}*VAL{MG Battery Current}/1000)*-1",-80,80,"kW","","","",1
 
