@@ -55,12 +55,12 @@
 "MG Tire Temp RR","Tire Temp RR","0x22b003","C/2",0,100,"C","724","","",1
 "MG Tire Temp RL","Tire Temp RL","0x22b003","D/2",0,100,"C","724","","",1
 
-"MG DCDC In Amp","Current Input","0x22b581","(INT16(A:B) - 32767)/10",0,10,"A","7E3","","",1
-"MG DCDC In Volt","Volt Input","0x22b582","INT16(A:B)/10",0,460,"V","7E3","","",1
 "MG DCDC Mode","Mode","0x22b580","A",0,5,"","7E3","","",1
-"MG DCDC Out Amp","Current Output","0x22b583","INT16(A:B)/10",0,100,"A","7E3","","",1
-"MG DCDC Out Volt","Volt Output","0x22b584","INT16(A:B)/10",8,16,"V","7E3","","",1
-"MG DCDC Temp","Temp","0x22b587","A-40",25,60,"C","7E3","","",1
+"MG DCDC Current In","Current Input","0x22b581","(INT16(A:B) - 32767)/10",0,10,"A","7E3","","",1
+"MG DCDC Voltage In","Volt Input","0x22b582","INT16(A:B)/10",0,460,"V","7E3","","",1
+"MG DCDC Current Out","Current Output","0x22b583","INT16(A:B)/10",0,100,"A","7E3","","",1
+"MG DCDC Voltage Out","Volt Output","0x22b584","INT16(A:B)/10",8,16,"V","7E3","","",1
+"MG DCDC Temperature","Temp","0x22b587","A-40",25,60,"C","7E3","","",1
 
 "MG BMS SystemMainRelayB","SMRB","0x22b049","a",0,1,"","781","","",1
 "MG BMS SystemMainRelayG","SMRG","0x22b04a","a",0,1,"","781","","",1
