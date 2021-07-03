@@ -36,7 +36,7 @@
 
 "MG Ambient Temperature","Air Temp","0x22e01b","INT16(A:B) / 10.0 - 40",0,50,"C","750","","",1
 "MG HVAC Temp","HVAC Temp","0x22e013","(INT16(A:B) / 10) - 30",0,100,"C","750","","",1
-"MG HVAC Blower Speed","Blower","0x22e00f","A",0,4,"Speed","750","","",1
+"MG HVAC Blower Speed","Blower","0x22e00f","LOOKUP(B:B:249='1':43='2':100='3':207='4':129='5':182='6')",0,6,"Speed","750","","",1
 
 "MG Tire Pressure FL","Tire Pressure FL","0x22b001","A*4",0,300,"kPa","724","","",1
 "MG Tire Pressure FR","Tire Pressure FR","0x22b001","B*4",0,300,"kPa","724","","",1
