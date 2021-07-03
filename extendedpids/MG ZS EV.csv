@@ -121,6 +121,11 @@
 "MG BMS CMU09 Voltage Imbalance","CMU01 Imbalance",,(VAL{MG BMS CMU09 MaxVolt} - VAL{MG BMS CMU09 MinVolt}) * 1000,0,1000,"mV",,"","",1
 "MG BMS CMU Overall Imbalance","CMU Imbalance","","(VAL{MG BMS CMU01 Voltage Imbalance}+VAL{MG BMS CMU02 Voltage Imbalance}+VAL{MG BMS CMU03 Voltage Imbalance}+VAL{MG BMS CMU04 Voltage Imbalance}+VAL{MG BMS CMU05 Voltage Imbalance}+VAL{MG BMS CMU06 Voltage Imbalance}+VAL{MG BMS CMU07 Voltage Imbalance}+VAL{MG BMS CMU08 Voltage Imbalance}+VAL{MG BMS CMU09 Voltage Imbalance})/9",0,1000,"mV","","","",1
 
+"MG EVCC Current","EVCC","0x22b001","INT16(A:B) / 10",0,456,"A","784","","",1
+"MG EVCC Max Current","EVCC Max Amps","0x22b003","INT16(A:B) / 4",0,456,"A","784","","",1
+"MG EVCC Voltage","EVCC","0x22b010","INT16(A:B) / 100",0,456,"V","784","","",1
+"MG EVCC Charging Rate","EVCC Charge","","(VAL{MG EVCC Voltage}*VAL{MG EVCC Current}/1000)",-80,80,"kW","","","",1
+
 "XX_BMS_SW_Ver_Raw","not for display","0x22f194","INT24(H:I:J)",0,1000000,"","781","","",1
 "MG BMS SW Version","BMS SW","","LOOKUP(VAL{XX_BMS_SW_Ver_Raw}:'???':4272176='A00':4272177='A01':5386551='R17':4543793='EU1':5387312='R40':5386808='R28':5387058='R32':5255225='P09')",0,1,"","","","",1
 "XX_BMS_Version_SoC _Factor","not for display","","LOOKUP(VAL{MG BMS SW Version}:-2:4272176=-3:5386551=-5:5387312=-5:5386808=-5:5387058=-3:5255225=-5)",-100,100,"","","","",1
