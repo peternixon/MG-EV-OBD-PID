@@ -40,7 +40,7 @@
 "MG HVAC Blower Speed","Blower","0x22e00f","LOOKUP(B:B:249='1':43='2':100='3':207='4':129='5':182='6')",0,6,"Speed","750","","",1
 "MG HVAC Vent Selection","Air Vents","0x22e007","LOOKUP(A::0='Vents':1='Floor/Vents':2='Floor':3='Screen/Floor':4='Screen':6='OFF')",0,6,"","750","","",1
 "MG Air Con","A/C","0x22e02d","LOOKUP(A::64='ON':0='OFF')",0,100,"","750","","",1
-"MG Cabin Ricirculation","Recirc","0x22e01e","LOOKUP(A::1='Fresh':0='Recirc')",0,6,"","750","","",1
+"MG Air Recirculation","Recirc","0x22e01e","LOOKUP(A::1='Fresh':0='Recirc')",0,6,"","750","","",1
 "MG Rear Demist","Rear Demist","0x22e038","LOOKUP(A::1='ON':0='OFF')",0,100,"","750","","",1
 "MG Screen Demist","Fwd Demist","0x22e02c","LOOKUP(A::0='OFF':1~1000='ON')",0,100,"","750","","",1
 
